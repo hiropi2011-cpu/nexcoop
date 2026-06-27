@@ -102,9 +102,9 @@ body {
   opacity: 0.75;
 }
 
-/* ロゴをヘッダーに合わせて縮小 */
+/* ロゴ：ヘッダー高さ(69px)を変えず限界まで拡大 */
 .header-logo-img {
-  height: 48px; /* ヘッダー圧縮に合わせて縮小 */
+  height: 62px; /* 48px から+30%。69pxヘッダー内に上下3.5px余白でギリギリ */
   object-fit: contain;
 }
 
@@ -511,7 +511,7 @@ body {
     height: 56px;
   }
   .header-logo-img {
-    height: 38px;
+    height: 49px; /* 38px から+30%（56pxヘッダー内ギリギリ） */
   }
   .header-nav {
     gap: 20px;
@@ -571,7 +571,7 @@ body {
     padding: 0 20px;
   }
   .header-logo-img {
-    height: 32px;
+    height: 42px; /* 32px から+30%（50pxヘッダー内ギリギリ） */
   }
   .menu-toggle {
     display: flex;
