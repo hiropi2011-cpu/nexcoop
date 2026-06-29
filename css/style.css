@@ -252,6 +252,50 @@ body {
   z-index: 10;
 }
 
+/* ヒーロー：4分野アイコンストリップ（読む→見るへ） */
+.hero-domains {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 42px;
+}
+.domain-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 22px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 210, 255, 0.25);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+.domain-chip:hover {
+  border-color: var(--color-primary-cyan);
+  transform: translateY(-2px);
+}
+.domain-chip svg { width: 22px; height: 22px; color: var(--color-primary-cyan); flex-shrink: 0; }
+.domain-chip span { font-size: 15px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.04em; white-space: nowrap; }
+
+/* ABOUT：4つの“共同”バッジ */
+.coop-intro { font-size: 15px; line-height: 1.85; color: var(--color-muted-dark); margin: 0 0 18px; font-weight: 400; }
+.coop-badges { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 40px; }
+.coop-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  border-radius: 12px;
+  background: rgba(0, 119, 255, 0.05);
+  border: 1px solid rgba(0, 119, 255, 0.12);
+  transition: all 0.3s ease;
+}
+.coop-badge:hover { border-color: rgba(0, 119, 255, 0.35); background: rgba(0, 119, 255, 0.08); }
+.coop-badge svg { width: 20px; height: 20px; color: var(--color-primary-blue); flex-shrink: 0; }
+.coop-badge span { font-size: 14px; font-weight: 800; color: var(--color-text-dark); }
+
 /* ---------------------------------
    ② ABOUT セクション：新しいコンセプト画像
    --------------------------------- */
@@ -617,6 +661,14 @@ body {
   .hero-text-container .section-title {
     font-size: 32px !important;
   }
+  /* ヒーロー4分野チップ：スマホは詰める */
+  .hero-domains { gap: 10px; margin-bottom: 34px; }
+  .domain-chip { padding: 9px 16px; gap: 8px; }
+  .domain-chip svg { width: 19px; height: 19px; }
+  .domain-chip span { font-size: 13px; }
+  /* 共同バッジ：スマホでも2列維持（コンパクト） */
+  .coop-badges { gap: 10px; }
+  .coop-badge { padding: 11px 12px; }
   .hero-text-container > div[style*="display: flex"] {
     flex-direction: column;
     gap: 14px !important;
